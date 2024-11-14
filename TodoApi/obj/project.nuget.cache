@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "9Qy7Wee6vomeEhGm4mJ0JWKK8CFcWOhAmj7n+5zFd3kqt6EadSXyftGlbYfwOXUkBScImkhalRwdsglpClG80A==",
+  "dgSpecHash": "kOZfhP2azFO8Qe4XnWe3ZunoLcE11SN7Gbej7tgH24F5WL8mbOFVWJzU9KyDz2GTxZe69tnqgqQEZovNwKzNmA==",
   "success": true,
   "projectFilePath": "C:\\SAPDevelop\\POC for dina\\kyma-runtime-extension-samples\\sample-extension-dotnet-minimalapi\\TodoApi\\TodoApi.csproj",
   "expectedPackageFiles": [
@@ -21,6 +21,8 @@
     "C:\\Users\\I560222\\.nuget\\packages\\microsoft.extensions.options\\6.0.0\\microsoft.extensions.options.6.0.0.nupkg.sha512",
     "C:\\Users\\I560222\\.nuget\\packages\\microsoft.extensions.primitives\\6.0.0\\microsoft.extensions.primitives.6.0.0.nupkg.sha512",
     "C:\\Users\\I560222\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\I560222\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
+    "C:\\Users\\I560222\\.nuget\\packages\\newtonsoft.json.schema\\4.0.1\\newtonsoft.json.schema.4.0.1.nupkg.sha512",
     "C:\\Users\\I560222\\.nuget\\packages\\swashbuckle.aspnetcore\\6.2.3\\swashbuckle.aspnetcore.6.2.3.nupkg.sha512",
     "C:\\Users\\I560222\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.2.3\\swashbuckle.aspnetcore.swagger.6.2.3.nupkg.sha512",
     "C:\\Users\\I560222\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.2.3\\swashbuckle.aspnetcore.swaggergen.6.2.3.nupkg.sha512",

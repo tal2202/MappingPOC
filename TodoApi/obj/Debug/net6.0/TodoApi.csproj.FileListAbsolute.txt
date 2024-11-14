@@ -37,3 +37,5 @@ C:\SAPDevelop\POC for dina\kyma-runtime-extension-samples\sample-extension-dotne
 C:\SAPDevelop\POC for dina\kyma-runtime-extension-samples\sample-extension-dotnet-minimalapi\TodoApi\obj\Debug\net6.0\TodoApi.pdb
 C:\SAPDevelop\POC for dina\kyma-runtime-extension-samples\sample-extension-dotnet-minimalapi\TodoApi\obj\Debug\net6.0\TodoApi.genruntimeconfig.cache
 C:\SAPDevelop\POC for dina\kyma-runtime-extension-samples\sample-extension-dotnet-minimalapi\TodoApi\obj\Debug\net6.0\ref\TodoApi.dll
+C:\SAPDevelop\POC for dina\kyma-runtime-extension-samples\sample-extension-dotnet-minimalapi\TodoApi\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\SAPDevelop\POC for dina\kyma-runtime-extension-samples\sample-extension-dotnet-minimalapi\TodoApi\bin\Debug\net6.0\Newtonsoft.Json.Schema.dll

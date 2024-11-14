@@ -1,4 +1,8 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Cdp.Mapping.ObjectBuilder;
+using Microsoft.EntityFrameworkCore;
+using Newtonsoft.Json.Linq;
+using Newtonsoft.Json.Schema;
+using TodoApi.ThinMappingEngine.ObjectBuilder;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
@@ -107,6 +111,7 @@ class TodoDb : DbContext
  class ExternalModleHandlerMiddleware
 {
     private readonly RequestDelegate _next;
+    private ObjectBuilder mappingEngine = new ObjectBuilder(new ValueProviderEngine(new TransformationEngine()));
 
     public ExternalModleHandlerMiddleware(RequestDelegate next)
     {
@@ -150,12 +155,31 @@ class TodoDb : DbContext
 
     private Todo MapModel(TodoItemExternalModel todo)
     {
-        return new Todo
-        {
-            Name = todo.FullName,
-            IsComplete = todo.ComplitionStatus
+        JSchema mappings = GetMappingDefinition();
 
-        };
+        var mappingResult = mappingEngine.Build(mappings, JObject.FromObject(todo));
+
+        try
+        {
+            return mappingResult.ToObject<Todo>();
+        }
+        catch (Exception ex)
+        {
+            return null;
+        }
+    }
+
+    private static JSchema GetMappingDefinition()
+    {
+        return JSchema.Parse(@"
+                {
+                    ""type"": ""object"",
+                    ""properties"": {
+                        ""Name"": {""type"": ""string"", ""valueProvider"": { ""type"": ""contextual"", ""pointer"": ""$.FullName"" }},                    
+                        ""IsComplete"": {""type"": ""boolean"", ""valueProvider"": { ""type"": ""contextual"", ""pointer"": ""$.ComplitionStatus"" }},
+                    }
+                }
+            ");
     }
 
     private bool IsExternalModel(TodoItemExternalModel? request)
